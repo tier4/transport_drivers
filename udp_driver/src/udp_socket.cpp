@@ -166,5 +166,10 @@ void UdpSocket::bind()
   m_udp_socket.bind(m_endpoint);
 }
 
+void UdpSocket::bind(const udp::endpoint & endpoint)
+{
+  m_udp_socket.bind(endpoint);
+}
+
 }  // namespace udp_driver
 }  // namespace drivers

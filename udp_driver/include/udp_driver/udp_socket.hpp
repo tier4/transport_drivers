@@ -51,6 +51,7 @@ public:
   void close();
   bool isOpen() const;
   void bind();
+  void bind(const udp::endpoint & endpoint);
 
   /*
    * Blocking Send Operation
