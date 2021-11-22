@@ -116,7 +116,7 @@ void UdpSocket::asyncReceiveHandler(
     return;
   }
 
-  if (bytes_transferred > 0 && m_func) {
+  if (m_func) {
     m_recv_buffer.resize(bytes_transferred);
     m_func(m_recv_buffer);
     m_recv_buffer.resize(m_recv_buffer_size);
